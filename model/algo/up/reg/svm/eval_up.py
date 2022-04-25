@@ -1,0 +1,37 @@
+from pathlib import Path
+import sys
+import os
+sys.path.append(os.getcwd())
+
+from common.eval import eval_processing
+
+def test_eval(
+            model_save_path = Path(__file__) / "../save_model/toy_up_model.pickle",
+            test_path = Path(__file__).parent.parent.parent / "../data/toy_test_up_model_20_8_3.txt",
+            type:str = "reg",
+            save_md_path:str = Path(__file__)/ "../output/reg_svm_out.md" ,
+            save_json_path: str = Path(__file__) / "../output/reg_svm_outj.json" ,
+            type_ud:str = "up",
+            type_stock: str = "all"
+            ):
+
+    assert os.path.exists(model_save_path) == True
+    assert os.path.exists(test_path) == True
+    output_path = Path(__file__)/ "../output"
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+    eval_processing(test_path=test_path,model_save_path=model_save_path,type=type,save_md_path=save_md_path, 
+                    save_json_path=save_json_path, type_ud=type_ud, type_stock=type_stock)
+
+    assert os.path.exists(save_md_path) ==True
+    assert os.path.exists(save_json_path) == True
+
+
+
+if __name__ == "__main__":
+
+    test_eval(model_save_path =Path(__file__) / "../save_model/toy_up_model.pickle",
+              test_path = Path(__file__).parent.parent.parent / "../data/toy_test_up_model_20_8_3.txt",
+              type = "reg",save_md_path = Path(__file__) / "../output/reg_svm_out.md" , 
+              save_json_path = Path(__file__) / "../output/reg_svm_outj.json" , 
+               type_ud = "up",type_stock = "all")

@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: flask-apidoc
+Version: 1.3.0
+Summary: Adds ApiDoc support to Flask
+Home-page: https://github.com/viniciuschiele/flask-apidoc
+Author: Vinicius Chiele
+Author-email: vinicius.chiele@gmail.com
+License: MIT
+Keywords: flask,apidoc,doc,documentation,rest,restful
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: CPython
+License-File: LICENSE
+
+UNKNOWN
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>股票预测系统/登录</title>
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="/static/assets/js/html5shiv.min.js"></script>
+		<script src="/static/assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper account-wrapper">
+        <div class="account-page">
+			<div class="account-center">
+				<div class="account-box">
+                    <form action="/register" class="form-signin" method="post">
+						<div class="page-header text-center">
+						    <h1 style="color: #FFFFFF;">注册</h1>
+						</div>
+                        <div class="form-group">
+                            <label><span style="color: #FFFFFF;">用户名</span></label>
+                            <input type="text" class="form-control" name=username placeholder="请输入用户名">
+                        </div>
+                        <div class="form-group">
+                            <label><span style="color: #FFFFFF;">密码</span></label>
+                            <input type="password" class="form-control" name=password placeholder="请输入密码">
+                        </div>
+						<div class="form-group">
+						    <label><span style="color: #FFFFFF;">密码</span></label>
+						    <input type="password" class="form-control" name=repassword placeholder="请确认密码">
+						</div>
+                        {% with messages = get_flashed_messages(with_categories=True, category_filter=['fail']) %}
+                            {% for message in messages %}
+                                <div class="alert alert-danger">{{ message }}</div>
+                            {% endfor %}
+                        {% endwith %}
+                        {% with messages = get_flashed_messages(with_categories=True, category_filter=['success']) %}
+                            {% for message in messages %}
+                                <div class="alert alert-success">{{ message }}</div>
+                            {% endfor %}
+                        {% endwith %}
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary account-btn">注册</button>
+                        </div>
+                        <div class="register-link text-right">
+                            已有账号？<a href="/goLogin" style="color: #008CFF;">点击登录</a>
+                        </div>
+                    </form>
+                </div>
+			</div>
+        </div>
+    </div>
+    <script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="/static/assets/js/popper.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/app.js"></script>
+</body>
+
+</html>

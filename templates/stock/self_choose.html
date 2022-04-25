@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>股票预测系统</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="/static/assets/js/html5shiv.min.js"></script>
+		<script src="/static/assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+        	<div class="header-left">
+        		<a class="logo">
+        			<span>Stock Predict</span>
+        		</a>
+        	</div>
+            <ul class="nav user-menu float-right">
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+        					<img class="rounded-circle" src="/static/assets/img/user.jpg" width="24" alt="Admin">
+        					<span class="status online"></span>
+        				</span>
+        				<span>{{username}}</span>
+                    </a>
+        			<div class="dropdown-menu">
+        				<a class="dropdown-item" href="/login_out">退出登录</a>
+        			</div>
+                </li>
+            </ul>
+        </div>
+		
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="active">
+                            <a href="/goSelfChoose"> <img src="/static/assets/img/selfchoose.svg" style="width: 20px;height: 20px;"/> <span>自选股</span></a>
+                        </li>
+						<li>
+                            <a href="/goLongLine"><img src="/static/assets/img/longline.svg" style="width: 20px;height: 20px;"/> <span>长线股</span></a>
+                        </li>
+                        <li>
+                            <a href="/goOneYear"> <img src="/static/assets/img/oneyear.svg" style="width: 20px;height: 16px;"/> <span>上市一年股票</span></a>
+                        </li>
+                        <li>
+                            <a href="/goThreeYear"><img src="/static/assets/img/threeyear.svg" style="width: 20px;height: 16px;"/></i> <span>上市三年股票</span></a>
+                        </li>
+                        <li>
+                            <a href="/goRecent"><img src="/static/assets/img/new1.svg" style="width: 20px;height: 16px;"/></i> <span>最近上市股票</span></a>
+                        </li>
+						<li class="submenu">
+							<a href="#"><img src="/static/assets/img/add2.svg" style="width: 20px;height: 20px;"/> <span> 股票添加 </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="/goAddSelfChoose">自选股票</a></li>
+								<li><a href="/goAddLongLine">长线股票</a></li>
+							</ul>
+						</li>
+						<li>
+						    <a href="/goMessage"> <img src="/static/assets/img/message1.svg" style="width: 20px;height: 20px;"/><span>每日信息</span></a>
+						</li>
+                        <li>
+						    <a href="/goHot"> <img src="/static/assets/img/hot.svg" style="width: 20px;height: 20px;"/><span>热门股票</span></a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <h4 class="page-title">自选股概览</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <div class="card-block">
+                                <h6 class="card-title text-bold">图表</h6>
+        						<div class="table-responsive">
+        							<table class="datatable table table-stripped ">
+                                    <thead>
+                                        <tr>
+                                            <th>股票代码</th>
+                                            <th>股票名字</th>
+                                            <th>股票行业</th>
+                                            <th>当天模型预测涨幅</th>
+                                            <th>当天模型预测跌幅</th>
+                                            <th>涨幅详情</th>
+											<th>跌幅详情</th>
+											<th>操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for self_choose_stock in self_choose_stocks %}
+                                        <tr>
+                                            <td>{{ self_choose_stock.stock_id }}</td>
+                                            <td>{{ self_choose_stock.stock_name}}</td>
+                                            <td>{{ self_choose_stock.stock_industry}}</td>
+                                            <td>{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}}</td>
+                                            <td>{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }}</td>
+                                            <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_up('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
+                                            <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_down('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
+											<td><a class="btn btn-danger btn-sm" href="javascript:;" onclick="del('{{ self_choose_stock.stock_id }}')"><font style="color: white">删除</font></a></td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+        						</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script>
+        function del(id){
+            location.href='/del_self?id='+id
+        }
+        function detail_up(id){
+            location.href='/goSelfDetailUp?id='+id
+        }
+        function detail_down(id){
+            location.href='/goSelfDetailDown?id='+id
+        }
+    </script>
+    <script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="/static/assets/js/popper.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/jquery.slimscroll.js"></script>
+    <script src="/static/assets/js/Chart.bundle.js"></script>
+    <script src="/static/assets/js/chart.js"></script>
+    <script src="/static/assets/js/app.js"></script>
+
+</body>
+
+</html>

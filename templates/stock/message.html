@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    
+    <title>股票预测系统</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="/static/assets/js/html5shiv.min.js"></script>
+		<script src="/static/assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a class="logo">
+					<span>Stock Predict</span>
+				</a>
+			</div>
+            <ul class="nav user-menu float-right">
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+							<img class="rounded-circle" src="/static/assets/img/user.jpg" width="24" alt="Admin">
+							<span class="status online"></span>
+						</span>
+						<span>{{username}}</span>
+                    </a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="/login_out">退出登录</a>
+					</div>
+                </li>
+            </ul>
+        </div>
+		
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="/goSelfChoose"> <img src="/static/assets/img/selfchoose.svg" style="width: 20px;height: 20px;"/> <span>自选股</span></a>
+                        </li>
+						<li>
+                            <a href="/goLongLine"><img src="/static/assets/img/longline.svg" style="width: 20px;height: 20px;"/> <span>长线股</span></a>
+                        </li>
+                        <li>
+                            <a href="/goOneYear"> <img src="/static/assets/img/oneyear.svg" style="width: 20px;height: 16px;"/> <span>上市一年股票</span></a>
+                        </li>
+                        <li>
+                            <a href="/goThreeYear"><img src="/static/assets/img/threeyear.svg" style="width: 20px;height: 16px;"/></i> <span>上市三年股票</span></a>
+                        </li>
+                        <li>
+                            <a href="/goRecent"><img src="/static/assets/img/new1.svg" style="width: 20px;height: 16px;"/></i> <span>最近上市股票</span></a>
+                        </li>
+						<li class="submenu">
+							<a href="#"><img src="/static/assets/img/add2.svg" style="width: 20px;height: 20px;"/> <span> 股票添加 </span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="/goAddSelfChoose">自选股票</a></li>
+								<li><a href="/goAddLongLine">长线股票</a></li>
+							</ul>
+						</li>
+						<li class="active">
+						    <a href="/goMessage"> <img src="/static/assets/img/message1.svg" style="width: 20px;height: 20px;"/><span>每日信息</span></a>
+						</li>
+                        <li>
+						    <a href="/goHot"> <img src="/static/assets/img/hot.svg" style="width: 20px;height: 20px;"/><span>热门股票</span></a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-8 col-4">
+                        <h4 class="page-title">每日资讯</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="blog grid-blog">
+                            <div class="blog-image">
+                                <img class="img-fluid" src="assets/img/blog/blog-01.jpg" alt="">
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">重磅利好！俄国防部做出重大决定，数倍减少军事行动，两大步骤缓解冲突！</h3>
+                                <p>当地时间3月29日，俄罗斯代表团团长梅津斯基在第五轮俄乌谈判第一天的会谈结束后表示，双方谈判很有建设性，俄方正在研究乌克兰方面的提议，相关信息将向普京总统报告。此外，他还说，俄罗斯正在采取两个步骤，来缓和与乌克兰的冲突。</p>
+                                <a href="blog-details.html" class="read-more"><i class="fa fa-long-arrow-right"></i> 阅读更多</a>
+                                <div class="blog-info clearfix">
+                                    <div class="post-left">
+                                        <ul>
+                                            <li><a href="#."><i class="fa fa-calendar"></i> <span>30 3, 2022</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="blog grid-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html"><img class="img-fluid" src="assets/img/blog/blog-02.jpg" alt=""></a>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">“十四五”中医药发展规划发布 明确十大任务！机构建议关注四大赛道</h3>
+                                <p>3月29日，国务院办公厅印发《“十四五”中医药发展规划》，明确到2025年，中医药健康服务能力明显增强，中医药高质量发展政策和体系进一步完善，中医药振兴发展取得积极成效，在健康中国建设中的独特优势得到充分发挥。为实现上述目标，《规划》提出建设高水平中医药传承保护与科技创新体系、推动中药产业高质量发展、发展中医药健康服务业、加快中医药开放发展等十大任务。</p>
+                                <a href="blog-details.html" class="read-more"><i class="fa fa-long-arrow-right"></i>阅读更多</a>
+                                <div class="blog-info clearfix">
+                                    <div class="post-left">
+                                        <ul>
+                                            <li><a href="#."><i class="fa fa-calendar"></i> <span>29 3, 2022</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="blog grid-blog">
+                            <div class="blog-image">
+                                <a href="blog-details.html"><img class="img-fluid" src="assets/img/blog/blog-03.jpg" alt=""></a>
+                            </div>
+                            <div class="blog-content">
+                                <h3 class="blog-title">小米产业链IPO政策受限？证监会发声：系谣言；小米回应：诉讼到底</h3>
+                                <p>日前，市场有传言“监管层对当前科创板、创业板在审涉及小米产业链的项目做了排查，涉小米产业链IPO政策受限”。3月29日，证监会对这一传闻重磅发声，直指该内容“失实”。“小米公司发言人”官微发布声明，将对“恶意造谣诉讼到底”。消息发布后，小米股价直线拉升，截至收盘跌幅收窄至2.49%，此前曾一度跌超7%。</p>
+                                <a href="blog-details.html" class="read-more"><i class="fa fa-long-arrow-right"></i> 阅读更多</a>
+                                <div class="blog-info clearfix">
+                                    <div class="post-left">
+                                        <ul>
+                                            <li><a href="#."><i class="fa fa-calendar"></i> <span>30 3, 2022</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="/static/assets/js/popper.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/jquery.slimscroll.js"></script>
+    <script src="/static/assets/js/Chart.bundle.js"></script>
+    <script src="/static/assets/js/chart.js"></script>
+    <script src="/static/assets/js/app.js"></script>
+
+</body>
+
+</html>

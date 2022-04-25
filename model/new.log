@@ -1,0 +1,7 @@
+2022-03-16 21:14:03,944 - c:/Users/mingch/Pictures/stocksystem/sources/services/run.py[line:42] - INFO: step 1: run all_market_stock.main()
+2022-03-16 21:14:03,944 - c:\Users\mingch\Pictures\stocksystem\sources\services\all_market_stock.py[line:8] - INFO: here...
+2022-03-16 21:14:17,266 - c:\Users\mingch\Pictures\stocksystem\sources\services\all_market_stock.py[line:22] - INFO: 10/4763
+2022-03-16 21:14:25,892 - c:\Users\mingch\Pictures\stocksystem\sources\services\all_market_stock.py[line:22] - INFO: 20/4763
+2022-03-16 21:14:34,075 - c:\Users\mingch\Pictures\stocksystem\sources\services\all_market_stock.py[line:22] - INFO: 30/4763
+2022-03-16 21:14:46,058 - c:\Users\mingch\Pictures\stocksystem\sources\services\all_market_stock.py[line:22] - INFO: 40/4763
+2022-03-16 21:14:54,583 - c:\Users\mingch\Pictures\stocksystem\sources\services\all_market_stock.py[line:22] - INFO: 50/4763
