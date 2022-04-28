@@ -17,7 +17,7 @@ stock_daily = db.stock_daily  # 每日真实数据，包括换手率
 
 def renew_daily_db():
     today = (datetime.datetime.now()).strftime("%Y-%m-%d")
-    if not stock_daily.find({"date": today}):
+    if stock_daily.find({"date": today}):
         pass
     else:
         print("正在执行renew_daily_db的任务-------------------------------------------")
