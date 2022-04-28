@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "620466f133b2c5b742752079"
+  },
+  "account": "mhx",
+  "password": "123456",
+  "count_self_choose": 4,
+  "self_choose_stock": [
+    "sh.600004",
+    "sh.600000",
+    "sh.600009",
+    "sh.600016"
+  ],
+  "count_long_line": 2,
+  "long_line_stock": [
+    "sh.600000",
+    "sh.600008"
+  ]
+},{
+  "_id": {
+    "$oid": "6216f7d856c0682f4aba416e"
+  },
+  "account": "hhy",
+  "password": "123456"
+}]
