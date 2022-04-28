@@ -37,6 +37,8 @@ def go_selfChoose():
     result = user.find_one({"account": username}, {'self_choose_stock': 1})
     print(result['self_choose_stock'])
     self_choose_stocks = stock_all.find({"stock_id": {'$in': result['self_choose_stock']}})
+    # print(123)
+    # print(self_choose_stocks[2]["stock_data"])
     return render_template('stock/self_choose.html', self_choose_stocks=self_choose_stocks, username=username)
 
 

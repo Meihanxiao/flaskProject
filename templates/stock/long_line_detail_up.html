@@ -115,8 +115,16 @@
                                         <td>{{ stock_data.date}}</td>
                                         <td>{{ stock_id }}</td>
                                         <td>{{ stock_name}}</td>
-                                        <td>{{ stock_data.stock_daily_predict_up }}</td>
-                                        <td>{{ stock_data.stock_daily_real_up }}</td>
+                                        {% if stock_data.stock_daily_predict_up < 0 %}
+                                            <td><font color="green">{{ stock_data.stock_daily_predict_up}} </font></td>
+                                        {% else %}
+                                            <td><font color="red">{{ stock_data.stock_daily_predict_up}} </font></td>
+                                        {% endif %}
+                                        {% if stock_data.stock_daily_real_up < 0 %}
+                                            <td><font color="green">{{ stock_data.stock_daily_real_up}} </font></td>
+                                        {% else %}
+                                            <td><font color="red">{{ stock_data.stock_daily_real_up}} </font></td>
+                                        {% endif %}
                                     </tr>
                                 {% endfor %}
 						    </tbody>

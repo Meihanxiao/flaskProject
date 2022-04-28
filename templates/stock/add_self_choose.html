@@ -100,12 +100,21 @@
         							    </thead>
         							    <tbody>
         							        {% for add_self_stock in add_self_stocks %}
-                                                <tr>
-                                                    <td>{{ add_self_stock.stock_id }}</td>
-                                                    <td>{{ add_self_stock.stock_name}}</td>
-                                                    <td>{{ add_self_stock.stock_industry}}</td>
-                                                    <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="add('{{ add_self_stock.stock_id }}')"><font style="color: white">添加 </font></a></td>
-                                                </tr>
+                                                {% if add_self_stock.stock_name[-2] == "退" %}
+                                                    <tr>
+                                                        <td>{{ add_self_stock.stock_id }}</td>
+                                                        <td><s>{{ add_self_stock.stock_name}}</s></td>
+                                                        <td>{{ add_self_stock.stock_industry}}</td>
+                                                        <td><a class="btn btn-secondary btn-sm disabled" href="javascript:;" onclick="add('{{ add_self_stock.stock_id }}')"><font style="color: white">添加 </font></a></td>
+                                                    </tr>
+                                                {% else %}
+                                                    <tr>
+                                                        <td>{{ add_self_stock.stock_id }}</td>
+                                                        <td>{{ add_self_stock.stock_name}}</td>
+                                                        <td>{{ add_self_stock.stock_industry}}</td>
+                                                        <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="add('{{ add_self_stock.stock_id }}')"><font style="color: white">添加 </font></a></td>
+                                                    </tr>
+                                                {% endif %}
                                             {% endfor %}
         							    </tbody>
         							</table>

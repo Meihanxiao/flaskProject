@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, flash, Blueprint, session, redirect
 import pymongo
 
+from services.add_run_model import add_run_model
+
 add = Blueprint('add', __name__)
 
 client = pymongo.MongoClient(host="localhost", port=27017)
@@ -15,6 +17,7 @@ stock_daily = db.stock_daily
 @add.route('/add_self', methods=['GET', 'POST'])
 def add_self_choose_stock():
     stock_id = request.args.get('id')  # 添加的自选股id
+    print(stock_id)
     username = session.get('username')
 
     new_self_stock = stock_all.find_one({"stock_id": stock_id})
@@ -32,7 +35,10 @@ def add_self_choose_stock():
         results['count_self_choose'] = results['count_self_choose']+1
         update_result = user.update_one({'account': username}, {'$set': results})
         if_choose = new_self_stock['if_choose']+1
+        # code = [stock_id]
+        # add_run_model(code)
         stock_all.update_one({'stock_id': stock_id}, {'$set': {'if_choose': if_choose}})
+
         Message = '添加成功'
         return redirect('/goAddSelfChoose')
     else:
@@ -44,11 +50,14 @@ def add_self_choose_stock():
 # 添加长线股
 @add.route('/add_long', methods=['GET', 'POST'])
 def add_long_ling_stock():
-    stock_id = request.form.get('stock_id')
+    stock_id = request.args.get('id')
+    print(stock_id)
     # stock_name = request.form.get('stock_name')
     # stock_industry = request.form.get('stock_industry')
     new_long_stock = stock_all.find_one({"stock_id": stock_id})
     username = session.get('username')
+    print(username)
+
     if new_long_stock is not None:
         # username = session.get('username')
         results = user.find_one({"account": username})
@@ -63,9 +72,9 @@ def add_long_ling_stock():
         results['count_long_line'] = results['count_long_line'] + 1
         update_result = user.update_one({'account': username}, {'$set': results})
         if_choose = new_long_stock['if_choose'] + 1
+        # code = [stock_id]
+        # add_run_model(code)
         stock_all.update_one({'stock_id': stock_id}, {'$set': {'if_choose': if_choose}})
-        Message = '添加成功'
-        # flash(Message, "success")
         return redirect('/goAddLongLine')
     else:
         Message = '股票信息输入有误'

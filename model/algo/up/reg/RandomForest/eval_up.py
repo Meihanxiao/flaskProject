@@ -5,6 +5,7 @@ sys.path.append(os.getcwd())
 
 from model.common.eval import eval_processing
 
+
 def test_eval(
             model_save_path = Path(__file__)/ "../save_model/20_0_0_3_train_up_model.pickle",
             test_path = Path(__file__).parent.parent.parent / "../../data/up/test.txt",

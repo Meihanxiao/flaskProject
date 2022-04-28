@@ -108,11 +108,27 @@
                                             <td>{{ self_choose_stock.stock_id }}</td>
                                             <td>{{ self_choose_stock.stock_name}}</td>
                                             <td>{{ self_choose_stock.stock_industry}}</td>
-                                            <td>{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}}</td>
-                                            <td>{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }}</td>
-                                            <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_up('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
-                                            <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_down('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
-											<td><a class="btn btn-danger btn-sm" href="javascript:;" onclick="del('{{ self_choose_stock.stock_id }}')"><font style="color: white">删除</font></a></td>
+                                            {% if  self_choose_stock.stock_data == [] %}
+                                                <td>预测结果尚未产生</td>
+                                                <td>预测结果尚未产生</td>
+                                                <td><a class="btn btn-secondary btn-sm disabled" href="javascript:;" onclick="detail_up('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
+                                                <td><a class="btn btn-secondary btn-sm disabled" href="javascript:;" onclick="detail_down('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
+											    <td><a class="btn btn-danger btn-sm" href="javascript:;" onclick="del('{{ self_choose_stock.stock_id }}')"><font style="color: white">删除</font></a></td>
+                                            {% else %}
+                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_up < 0 %}
+                                                    <td><font color="green">{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}} </font></td>
+                                                {% else %}
+                                                    <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}} </font></td>
+                                                {% endif %}
+                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_up < 0 %}
+                                                    <td><font color="green">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }} </font></td>
+                                                {% else %}
+                                                    <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }} </font></td>
+                                                {% endif %}
+                                                <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_up('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
+                                                <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_down('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
+											    <td><a class="btn btn-danger btn-sm" href="javascript:;" onclick="del('{{ self_choose_stock.stock_id }}')"><font style="color: white">删除</font></a></td>
+                                            {% endif %}
                                         </tr>
                                     {% endfor %}
                                     </tbody>
