@@ -13555,6 +13555,20 @@
       "stock_daily_real_up": 0.012946000000000004,
       "stock_daily_predict_down": 0,
       "stock_daily_real_down": 0
+    },
+    {
+      "date": "2022-05-07",
+      "stock_daily_predict_up": 0.0103,
+      "stock_daily_real_up": 0.012946000000000004,
+      "stock_daily_predict_down": 0,
+      "stock_daily_real_down": 0
+    },
+    {
+      "date": "2022-05-10",
+      "stock_daily_predict_up": 0.0103,
+      "stock_daily_real_up": 0.012946000000000004,
+      "stock_daily_predict_down": 0,
+      "stock_daily_real_down": 0
     }
   ],
   "if_choose": 2
@@ -13637,6 +13651,20 @@
       "stock_daily_real_up": 0.032410999999999995,
       "stock_daily_predict_down": 0,
       "stock_daily_real_down": 0
+    },
+    {
+      "date": "2022-05-07",
+      "stock_daily_predict_up": 0.0393,
+      "stock_daily_real_up": 0.032410999999999995,
+      "stock_daily_predict_down": 0,
+      "stock_daily_real_down": 0
+    },
+    {
+      "date": "2022-05-10",
+      "stock_daily_predict_up": 0.0393,
+      "stock_daily_real_up": 0.032410999999999995,
+      "stock_daily_predict_down": 0,
+      "stock_daily_real_down": 0
     }
   ],
   "if_choose": 1
@@ -13708,7 +13736,7 @@
       "stock_daily_real_down": 0
     }
   ],
-  "if_choose": 1
+  "if_choose": 0
 },{
   "_id": {
     "$oid": "6225bd40877019e8ecdb99dc"
@@ -13745,6 +13773,20 @@
       "date": "2022-04-29",
       "stock_daily_predict_up": 0.0391,
       "stock_daily_real_up": 0.015798999999999994,
+      "stock_daily_predict_down": 0,
+      "stock_daily_real_down": 0
+    },
+    {
+      "date": "2022-05-07",
+      "stock_daily_predict_up": 0.0162,
+      "stock_daily_real_up": 0.028206,
+      "stock_daily_predict_down": 0,
+      "stock_daily_real_down": 0
+    },
+    {
+      "date": "2022-05-10",
+      "stock_daily_predict_up": 0.0162,
+      "stock_daily_real_up": 0.028206,
       "stock_daily_predict_down": 0,
       "stock_daily_real_down": 0
     }
@@ -13831,7 +13873,7 @@
       "stock_daily_real_down": 0
     }
   ],
-  "if_choose": 1
+  "if_choose": 0
 },{
   "_id": {
     "$oid": "6225bd40877019e8ecdb99e2"
@@ -79083,7 +79125,9 @@
   },
   "stock_id": "of.159776",
   "stock_name": "银华中证港股通医药卫生综合ETF",
-  "stock_time_to_market": "2022-03-07",
+  "stock_time_to_market": {
+    "$date": "2022-03-06T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79093,7 +79137,9 @@
   },
   "stock_id": "of.159787",
   "stock_name": "易方达中证全指建筑材料ETF",
-  "stock_time_to_market": "2022-03-04",
+  "stock_time_to_market": {
+    "$date": "2022-03-03T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79103,7 +79149,9 @@
   },
   "stock_id": "of.159796",
   "stock_name": "汇添富中证电池主题ETF",
-  "stock_time_to_market": "2022-03-03",
+  "stock_time_to_market": {
+    "$date": "2022-03-02T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79113,7 +79161,9 @@
   },
   "stock_id": "of.159832",
   "stock_name": "平安上海金ETF",
-  "stock_time_to_market": "2022-03-02",
+  "stock_time_to_market": {
+    "$date": "2022-03-01T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79123,7 +79173,9 @@
   },
   "stock_id": "of.159834",
   "stock_name": "南方上海金ETF",
-  "stock_time_to_market": "2022-03-03",
+  "stock_time_to_market": {
+    "$date": "2022-03-02T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79133,7 +79185,9 @@
   },
   "stock_id": "of.513070",
   "stock_name": "易方达中证港股通消费主题ETF",
-  "stock_time_to_market": "2022-03-14",
+  "stock_time_to_market": {
+    "$date": "2022-03-13T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79143,7 +79197,9 @@
   },
   "stock_id": "of.513320",
   "stock_name": "易方达恒生港股通新经济ETF",
-  "stock_time_to_market": "2022-03-03",
+  "stock_time_to_market": {
+    "$date": "2022-03-02T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79153,7 +79209,9 @@
   },
   "stock_id": "of.513960",
   "stock_name": "博时中证港股通消费主题ETF",
-  "stock_time_to_market": "2022-03-03",
+  "stock_time_to_market": {
+    "$date": "2022-03-02T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79163,7 +79221,9 @@
   },
   "stock_id": "of.517500",
   "stock_name": "国泰中证沪港深动漫游戏ETF",
-  "stock_time_to_market": "2022-03-03",
+  "stock_time_to_market": {
+    "$date": "2022-03-02T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79173,7 +79233,9 @@
   },
   "stock_id": "of.517780",
   "stock_name": "浦银安盛中华交易服务沪深港300ETF",
-  "stock_time_to_market": "2022-03-08",
+  "stock_time_to_market": {
+    "$date": "2022-03-07T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79183,7 +79245,9 @@
   },
   "stock_id": "of.517900",
   "stock_name": "招商中证银行AH价格优选ETF",
-  "stock_time_to_market": "2022-03-15",
+  "stock_time_to_market": {
+    "$date": "2022-03-14T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79193,7 +79257,9 @@
   },
   "stock_id": "of.560600",
   "stock_name": "方正富邦中证医药及医疗器械创新ETF",
-  "stock_time_to_market": "2022-03-03",
+  "stock_time_to_market": {
+    "$date": "2022-03-02T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79203,7 +79269,9 @@
   },
   "stock_id": "of.562520",
   "stock_name": "华夏中证智选1000成长创新策略ETF",
-  "stock_time_to_market": "2022-03-08",
+  "stock_time_to_market": {
+    "$date": "2022-03-07T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79213,7 +79281,9 @@
   },
   "stock_id": "sh.110085",
   "stock_name": "通22转债",
-  "stock_time_to_market": "2022-03-18",
+  "stock_time_to_market": {
+    "$date": "2022-03-17T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79223,7 +79293,9 @@
   },
   "stock_id": "sh.113640",
   "stock_name": "苏利转债",
-  "stock_time_to_market": "2022-03-10",
+  "stock_time_to_market": {
+    "$date": "2022-03-09T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79233,7 +79305,9 @@
   },
   "stock_id": "sh.603070",
   "stock_name": "万控智造",
-  "stock_time_to_market": "2022-03-10",
+  "stock_time_to_market": {
+    "$date": "2022-03-09T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79243,7 +79317,9 @@
   },
   "stock_id": "sh.603261",
   "stock_name": "立航科技",
-  "stock_time_to_market": "2022-03-15",
+  "stock_time_to_market": {
+    "$date": "2022-03-14T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79253,7 +79329,9 @@
   },
   "stock_id": "sh.688102",
   "stock_name": "斯瑞新材",
-  "stock_time_to_market": "2022-03-16",
+  "stock_time_to_market": {
+    "$date": "2022-03-15T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79263,7 +79341,9 @@
   },
   "stock_id": "sh.688115",
   "stock_name": "思林杰",
-  "stock_time_to_market": "2022-03-14",
+  "stock_time_to_market": {
+    "$date": "2022-03-13T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79273,7 +79353,9 @@
   },
   "stock_id": "sh.688163",
   "stock_name": "赛伦生物",
-  "stock_time_to_market": "2022-03-11",
+  "stock_time_to_market": {
+    "$date": "2022-03-10T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79283,7 +79365,9 @@
   },
   "stock_id": "sh.688175",
   "stock_name": "高凌信息",
-  "stock_time_to_market": "2022-03-15",
+  "stock_time_to_market": {
+    "$date": "2022-03-14T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79293,7 +79377,9 @@
   },
   "stock_id": "sh.688207",
   "stock_name": "格灵深瞳",
-  "stock_time_to_market": "2022-03-17",
+  "stock_time_to_market": {
+    "$date": "2022-03-16T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79303,7 +79389,9 @@
   },
   "stock_id": "sh.688281",
   "stock_name": "华秦科技",
-  "stock_time_to_market": "2022-03-07",
+  "stock_time_to_market": {
+    "$date": "2022-03-06T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79313,7 +79401,9 @@
   },
   "stock_id": "sz.001266",
   "stock_name": "宏英智能",
-  "stock_time_to_market": "2022-02-28",
+  "stock_time_to_market": {
+    "$date": "2022-02-27T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79323,7 +79413,9 @@
   },
   "stock_id": "sz.123138",
   "stock_name": "丝路转债",
-  "stock_time_to_market": "2022-03-22",
+  "stock_time_to_market": {
+    "$date": "2022-03-21T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79333,7 +79425,9 @@
   },
   "stock_id": "sz.127053",
   "stock_name": "豪美转债",
-  "stock_time_to_market": "2022-03-04",
+  "stock_time_to_market": {
+    "$date": "2022-03-03T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79343,7 +79437,9 @@
   },
   "stock_id": "sz.127054",
   "stock_name": "双箭转债",
-  "stock_time_to_market": "2022-03-15",
+  "stock_time_to_market": {
+    "$date": "2022-03-14T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79353,7 +79449,9 @@
   },
   "stock_id": "sz.301110",
   "stock_name": "青木股份",
-  "stock_time_to_market": "2022-03-11",
+  "stock_time_to_market": {
+    "$date": "2022-03-10T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79363,7 +79461,9 @@
   },
   "stock_id": "sz.301131",
   "stock_name": "聚赛龙",
-  "stock_time_to_market": "2022-03-14",
+  "stock_time_to_market": {
+    "$date": "2022-03-13T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79373,7 +79473,9 @@
   },
   "stock_id": "sz.301200",
   "stock_name": "大族数控",
-  "stock_time_to_market": "2022-02-28",
+  "stock_time_to_market": {
+    "$date": "2022-02-27T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79383,7 +79485,9 @@
   },
   "stock_id": "sz.301215",
   "stock_name": "中汽股份",
-  "stock_time_to_market": "2022-03-08",
+  "stock_time_to_market": {
+    "$date": "2022-03-07T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79393,7 +79497,9 @@
   },
   "stock_id": "sz.301218",
   "stock_name": "华是科技",
-  "stock_time_to_market": "2022-03-07",
+  "stock_time_to_market": {
+    "$date": "2022-03-06T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79403,7 +79509,9 @@
   },
   "stock_id": "sz.301219",
   "stock_name": "腾远钴业",
-  "stock_time_to_market": "2022-03-17",
+  "stock_time_to_market": {
+    "$date": "2022-03-16T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79413,7 +79521,9 @@
   },
   "stock_id": "sz.301222",
   "stock_name": "浙江恒威",
-  "stock_time_to_market": "2022-03-09",
+  "stock_time_to_market": {
+    "$date": "2022-03-08T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79423,7 +79533,9 @@
   },
   "stock_id": "sz.301236",
   "stock_name": "软通动力",
-  "stock_time_to_market": "2022-03-15",
+  "stock_time_to_market": {
+    "$date": "2022-03-14T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79433,7 +79545,9 @@
   },
   "stock_id": "of.159831",
   "stock_name": "嘉实上海金ETF",
-  "stock_time_to_market": "2022-03-23",
+  "stock_time_to_market": {
+    "$date": "2022-03-22T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79443,7 +79557,9 @@
   },
   "stock_id": "of.159833",
   "stock_name": "大成上海金ETF",
-  "stock_time_to_market": "2022-03-18",
+  "stock_time_to_market": {
+    "$date": "2022-03-17T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79453,7 +79569,9 @@
   },
   "stock_id": "of.560880",
   "stock_name": "广发中证全指家用电器ETF",
-  "stock_time_to_market": "2022-03-30",
+  "stock_time_to_market": {
+    "$date": "2022-03-29T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79463,7 +79581,9 @@
   },
   "stock_id": "sh.113054",
   "stock_name": "绿动转债",
-  "stock_time_to_market": "2022-03-23",
+  "stock_time_to_market": {
+    "$date": "2022-03-22T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79473,7 +79593,9 @@
   },
   "stock_id": "sh.113055",
   "stock_name": "成银转债",
-  "stock_time_to_market": "2022-04-06",
+  "stock_time_to_market": {
+    "$date": "2022-04-05T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79483,7 +79605,9 @@
   },
   "stock_id": "sh.113641",
   "stock_name": "华友转债",
-  "stock_time_to_market": "2022-03-23",
+  "stock_time_to_market": {
+    "$date": "2022-03-22T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79493,7 +79617,9 @@
   },
   "stock_id": "sh.113642",
   "stock_name": "上22转债",
-  "stock_time_to_market": "2022-04-06",
+  "stock_time_to_market": {
+    "$date": "2022-04-05T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79503,7 +79629,9 @@
   },
   "stock_id": "sh.603051",
   "stock_name": "鹿山新材",
-  "stock_time_to_market": "2022-03-25",
+  "stock_time_to_market": {
+    "$date": "2022-03-24T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79513,7 +79641,9 @@
   },
   "stock_id": "sh.603209",
   "stock_name": "兴通股份",
-  "stock_time_to_market": "2022-03-24",
+  "stock_time_to_market": {
+    "$date": "2022-03-23T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79523,7 +79653,9 @@
   },
   "stock_id": "sh.688048",
   "stock_name": "长光华芯",
-  "stock_time_to_market": "2022-04-01",
+  "stock_time_to_market": {
+    "$date": "2022-03-31T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79533,7 +79665,9 @@
   },
   "stock_id": "sh.688150",
   "stock_name": "莱特光电",
-  "stock_time_to_market": "2022-03-18",
+  "stock_time_to_market": {
+    "$date": "2022-03-17T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79543,7 +79677,9 @@
   },
   "stock_id": "sh.688193",
   "stock_name": "仁度生物",
-  "stock_time_to_market": "2022-03-30",
+  "stock_time_to_market": {
+    "$date": "2022-03-29T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79553,7 +79689,9 @@
   },
   "stock_id": "sh.688197",
   "stock_name": "首药控股",
-  "stock_time_to_market": "2022-03-23",
+  "stock_time_to_market": {
+    "$date": "2022-03-22T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79563,7 +79701,9 @@
   },
   "stock_id": "sh.688238",
   "stock_name": "和元生物",
-  "stock_time_to_market": "2022-03-22",
+  "stock_time_to_market": {
+    "$date": "2022-03-21T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79573,7 +79713,9 @@
   },
   "stock_id": "sh.688282",
   "stock_name": "理工导航",
-  "stock_time_to_market": "2022-03-18",
+  "stock_time_to_market": {
+    "$date": "2022-03-17T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79583,7 +79725,9 @@
   },
   "stock_id": "sh.688306",
   "stock_name": "均普智能",
-  "stock_time_to_market": "2022-03-22",
+  "stock_time_to_market": {
+    "$date": "2022-03-21T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79593,7 +79737,9 @@
   },
   "stock_id": "sh.688331",
   "stock_name": "荣昌生物",
-  "stock_time_to_market": "2022-03-31",
+  "stock_time_to_market": {
+    "$date": "2022-03-30T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79603,7 +79749,9 @@
   },
   "stock_id": "sz.001308",
   "stock_name": "康冠科技",
-  "stock_time_to_market": "2022-03-18",
+  "stock_time_to_market": {
+    "$date": "2022-03-17T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79613,7 +79761,9 @@
   },
   "stock_id": "sz.123139",
   "stock_name": "铂科转债",
-  "stock_time_to_market": "2022-03-31",
+  "stock_time_to_market": {
+    "$date": "2022-03-30T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79623,7 +79773,9 @@
   },
   "stock_id": "sz.123140",
   "stock_name": "天地转债",
-  "stock_time_to_market": "2022-03-30",
+  "stock_time_to_market": {
+    "$date": "2022-03-29T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79633,7 +79785,9 @@
   },
   "stock_id": "sz.123141",
   "stock_name": "宏丰转债",
-  "stock_time_to_market": "2022-04-08",
+  "stock_time_to_market": {
+    "$date": "2022-04-07T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79643,7 +79797,9 @@
   },
   "stock_id": "sz.127055",
   "stock_name": "精装转债",
-  "stock_time_to_market": "2022-03-24",
+  "stock_time_to_market": {
+    "$date": "2022-03-23T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79653,7 +79809,9 @@
   },
   "stock_id": "sz.301102",
   "stock_name": "兆讯传媒",
-  "stock_time_to_market": "2022-03-28",
+  "stock_time_to_market": {
+    "$date": "2022-03-27T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79663,7 +79821,9 @@
   },
   "stock_id": "sz.301103",
   "stock_name": "何氏眼科",
-  "stock_time_to_market": "2022-03-22",
+  "stock_time_to_market": {
+    "$date": "2022-03-21T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79673,7 +79833,9 @@
   },
   "stock_id": "sz.301137",
   "stock_name": "哈焊华通",
-  "stock_time_to_market": "2022-03-22",
+  "stock_time_to_market": {
+    "$date": "2022-03-21T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79683,7 +79845,9 @@
   },
   "stock_id": "sz.301216",
   "stock_name": "万凯新材",
-  "stock_time_to_market": "2022-03-29",
+  "stock_time_to_market": {
+    "$date": "2022-03-28T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79693,7 +79857,9 @@
   },
   "stock_id": "sz.301226",
   "stock_name": "祥明智能",
-  "stock_time_to_market": "2022-03-25",
+  "stock_time_to_market": {
+    "$date": "2022-03-24T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79703,7 +79869,9 @@
   },
   "stock_id": "sz.301237",
   "stock_name": "和顺科技",
-  "stock_time_to_market": "2022-03-23",
+  "stock_time_to_market": {
+    "$date": "2022-03-22T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79713,7 +79881,9 @@
   },
   "stock_id": "sz.301256",
   "stock_name": "华融化学",
-  "stock_time_to_market": "2022-03-22",
+  "stock_time_to_market": {
+    "$date": "2022-03-21T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79723,7 +79893,9 @@
   },
   "stock_id": "sz.301258",
   "stock_name": "富士莱",
-  "stock_time_to_market": "2022-03-29",
+  "stock_time_to_market": {
+    "$date": "2022-03-28T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
@@ -79733,7 +79905,9 @@
   },
   "stock_id": "sz.301263",
   "stock_name": "泰恩康",
-  "stock_time_to_market": "2022-03-29",
+  "stock_time_to_market": {
+    "$date": "2022-03-28T16:00:00Z"
+  },
   "stock_industry": "",
   "stock_data": [],
   "if_choose": 0
