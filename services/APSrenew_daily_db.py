@@ -17,8 +17,7 @@ stock_daily = db.stock_daily  # 每日真实数据，包括换手率
 
 def renew_daily_db():
     today = (datetime.datetime.now()).strftime("%Y-%m-%d")
-
-    if stock_daily.find({"date": today}).count() != 0: # 如果数据库中有
+    if stock_daily.find({"date": today}).count() == 0: # 如果数据库中有
         pass
     else:
         lg = bs.login()
@@ -30,15 +29,13 @@ def renew_daily_db():
             pass
         else:
             print("正在执行renew_daily_db的任务-------------------------------------------")
-            # path = os.path.dirname(__file__) + "\data\history_A_stock_k_data.csv"
-            # path = os.path.dirname(__file__) + "/data/history_A_stock_k_data.csv"
-            path = "D:\\study\\code\\pycharmcode\\flaskProject\\services\\data\\history_A_stock_k_data.csv"
-            # path = "/usr/local/flaskProject/services/data/history_A_stock_k_data.csv"
+            path = "D:\\study\\code\\pycharmcode\\flaskProject\\services\\data\\history_A_stock_k_data.csv"  # windows
+            # path = "/usr/local/flaskProject/services/data/history_A_stock_k_data.csv"  # linux
             if os.path.isfile(path):
                 os.remove(path)
             code_list = []
 
-            name_condition = {"$or": [{"stock_id": {'$regex': '^sh.6'}}, {"stock_id": {'$regex': '^sz.00'}},
+            name_condition = {"$or": [{"stock_id": {'$regex': '^sh.'}}, {"stock_id": {'$regex': '^sz.00'}},
                                       {"stock_id": {'$regex': '^sz.30'}}]}
             new_data = db.stock_all.find(name_condition)
             for data in new_data:

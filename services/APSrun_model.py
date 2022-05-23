@@ -46,9 +46,8 @@ def run_model():
         print("数据训练成功！！！")
 
         # 更新test.txt
-        # path = os.path.dirname(os.getcwd())
-        path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up\\test.txt"
-        # path = "/usr/local/flaskProject/model/data/up/test.txt"
+        path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up\\test.txt" # windows
+        # path = "/usr/local/flaskProject/model/data/up/test.txt"  # linux
 
 
 
@@ -64,10 +63,8 @@ def run_model():
                 "f_109,f_110,f_111,f_112,f_113,f_114,f_115,f_116,f_117,f_118,f_119,f_120,f_121,f_122,f_123,f_124,"
                 "f_125,f_126,f_127,f_128,f_129,f_130,f_131,f_132,f_133,f_134,f_135,f_136,f_137,f_138,f_139" + "\r")
         file_list = []
-        # file_path = path + "\model\data\up"
-        file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up"
-        # file_path = "/usr/local/flaskProject/model/data/up"
-        # file_path = path + "/model/data/up"  # (linux)
+        file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up"  # windows
+        # file_path = "/usr/local/flaskProject/model/data/up"  # linux
         image_dir_list = os.listdir(file_path)
         for file in image_dir_list:
             if os.path.basename(file)[0:2] == 'sh' or os.path.basename(file)[0:2] == 'sz':
@@ -80,7 +77,9 @@ def run_model():
         print("数据测试成功！！！")
         stock_daily_predict_up = eval.test_data_set_y
         stock_daily_real_up = eval.prediction_y
-        print(stock_daily_real_up[0])
+        print("涨")
+        print(stock_daily_predict_up)
+        print(stock_daily_real_up)
 
 
 
@@ -90,13 +89,12 @@ def run_model():
 
 
         # 训练
-        # train_down(n=100)
+        train_down(n=100)
         print("数据训练成功！！！")
 
         # 更新test.txt
-        # path = os.path.dirname(os.getcwd())
-        path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down\\test.txt"
-        # path = "/usr/local/flaskProject/model/data/up/test.txt"
+        path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down\\test.txt"  # windows
+        # path = "/usr/local/flaskProject/model/data/up/test.txt"  # linux
 
         file = open(path, 'w').close()  # 清除test.txt
         with open(file=path, mode="w") as f1:
@@ -111,9 +109,8 @@ def run_model():
                 "f_125,f_126,f_127,f_128,f_129,f_130,f_131,f_132,f_133,f_134,f_135,f_136,f_137,f_138,f_139" + "\r")
         file_list = []
         # file_path = path + "\model\data\up"
-        file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down"
-        # file_path = "/usr/local/flaskProject/model/data/up"
-        # file_path = path + "/model/data/up"  # (linux)
+        file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down"  # windows
+        # file_path = "/usr/local/flaskProject/model/data/up"  # linux
         image_dir_list = os.listdir(file_path)
         for file in image_dir_list:
             if os.path.basename(file)[0:2] == 'sh' or os.path.basename(file)[0:2] == 'sz':
@@ -129,7 +126,9 @@ def run_model():
         print("数据测试成功！！！")
         stock_daily_predict_down = eval.test_data_set_y
         stock_daily_real_down = eval.prediction_y
-        print(stock_daily_real_down[0])
+        print("跌")
+        print(stock_daily_predict_down)
+        print(stock_daily_real_down)
 
 
 
@@ -149,7 +148,7 @@ def run_model():
         temp = 0
         for code in code_lists:
             result = stock_all.find_one({"stock_id": code})
-            new_record = {"date": (datetime.datetime.now() + relativedelta(days=1)).strftime("%Y-%m-%d"),
+            new_record = {"date": (datetime.datetime.now()).strftime("%Y-%m-%d"),
                           "stock_daily_predict_up": stock_daily_predict_up[temp],
                           "stock_daily_real_up": stock_daily_real_up[temp], "stock_daily_predict_down": stock_daily_predict_down[temp],
                           "stock_daily_real_down": stock_daily_real_down[temp]}

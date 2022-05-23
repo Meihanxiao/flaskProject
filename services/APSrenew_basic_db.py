@@ -16,10 +16,8 @@ stock_daily = db.stock_daily  # 每日真实数据，包括换手率
 # 每日更新基础数据库
 def renew_basic_db():
     print("正在执行renew_basic_db的任务-------------------------------------------")
-    # path = os.path.dirname(__file__) + "\data\stock_basic.csv"
     path = "D:\\study\\code\\pycharmcode\\flaskProject\\services\\data\\stock_basic.csv"
-    # path = "/usr/local/flaskProject/services/data/stock_basic.csv"
-    # path = os.path.dirname(__file__) + "/data/stock_basic.csv"  #(linux)
+    # path = "/usr/local/flaskProject/services/data/stock_basic.csv"  # linux
     print(path)
     if os.path.isfile(path):
         os.remove(path)

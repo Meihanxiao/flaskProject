@@ -93,7 +93,8 @@ def go_Recent():
     end_date = parser.parse(end_date)
     print(end_date)
     time_condition = {"stock_time_to_market": {'$gt': start_date, '$lt': end_date}}
-    name_condition = {"$or": [{"stock_id": {'$regex': '^sh.6'}}, {"stock_id": {'$regex': '^sz.00'}}, {"stock_id": {'$regex': '^sz.30'}}]}
+    name_condition = {"$or": [{"stock_id": {'$regex': '^sh.'}}, {"stock_id": {'$regex': '^sz.00'}},
+                              {"stock_id": {'$regex': '^sz.30'}}]}
     recent_stocks = stock_all.find({"$and": [time_condition, name_condition]})
     return render_template('stock/recent_stock.html', recent_stocks=recent_stocks, username=username)
 

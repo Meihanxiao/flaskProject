@@ -6,10 +6,10 @@ from flask_apscheduler import APScheduler
 
 # 文件操作
 def lines(file_list):
-    file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up\\"
-    # file_path = "/usr/local/flaskProject/model/data/up/"
-    test_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up\\test.txt"
-    # test_path = "/usr/local/flaskProject/model/data/up/test.txt"
+    file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up\\"  # windows
+    # file_path = "/usr/local/flaskProject/model/data/up/"  # linux
+    test_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\up\\test.txt"  # windows
+    # test_path = "/usr/local/flaskProject/model/data/up/test.txt"  # linux
     for file in file_list:
         path = file_path + file
         with open(file=path, mode="r") as f1:
@@ -22,10 +22,10 @@ def lines(file_list):
             f2.write(last_line)
 
 def lines1(file_list):
-    file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down\\"
-    # file_path = "/usr/local/flaskProject/model/data/down/"
-    test_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down\\test.txt"
-    # test_path = "/usr/local/flaskProject/model/data/down/test.txt"
+    file_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down\\"  # windows
+    # file_path = "/usr/local/flaskProject/model/data/down/"  # linux
+    test_path = "D:\\study\\code\\pycharmcode\\flaskProject\\model\\data\\down\\test.txt"  # windows
+    # test_path = "/usr/local/flaskProject/model/data/down/test.txt"  # linux
     for file in file_list:
         path = file_path + file
         with open(file=path, mode="r") as f1:
