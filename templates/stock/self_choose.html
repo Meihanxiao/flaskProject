@@ -120,7 +120,7 @@
                                                 {% else %}
                                                     <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}} </font></td>
                                                 {% endif %}
-                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_up < 0 %}
+                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_down < 0 %}
                                                     <td><font color="green">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }} </font></td>
                                                 {% else %}
                                                     <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }} </font></td>

@@ -88,8 +88,10 @@ def go_Recent():
     username = session.get('username')
     start_date = (datetime.datetime.now() + relativedelta(days=-60)).strftime("%Y-%m-%dT00:00:00.000Z")
     start_date = parser.parse(start_date)
+    print(start_date)
     end_date = (datetime.datetime.now() + relativedelta(days=-59)).strftime("%Y-%m-%dT00:00:00.000Z")
     end_date = parser.parse(end_date)
+    print(end_date)
     time_condition = {"stock_time_to_market": {'$gt': start_date, '$lt': end_date}}
     name_condition = {"$or": [{"stock_id": {'$regex': '^sh.6'}}, {"stock_id": {'$regex': '^sz.00'}}, {"stock_id": {'$regex': '^sz.30'}}]}
     recent_stocks = stock_all.find({"$and": [time_condition, name_condition]})

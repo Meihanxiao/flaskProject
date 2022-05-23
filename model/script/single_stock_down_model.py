@@ -26,9 +26,9 @@ def get_single_stock_down_data(lg: bs, stock_code: list, save_path: str) -> None
         # 天周月线指标：date,code,open,high,low,close,volume,amount,turn,pctChg
         # ----------------------------------------------------------------------
         rs = bs.query_history_k_data_plus(stock_code,
-            "date,code,open,high,low,close,volume,turn, pctChg",
-             end_date = time.strftime("%Y-%m-%d", time.localtime()),
-            frequency="d", adjustflag="2")
+                                          "date,code,open,high,low,close,volume,turn, pctChg", start_date="2021-08-14",
+                                          end_date=time.strftime("%Y-%m-%d", time.localtime()),
+                                          frequency="d", adjustflag="2")
 
         data_list_d = []
         while (rs.error_code == '0') & rs.next():

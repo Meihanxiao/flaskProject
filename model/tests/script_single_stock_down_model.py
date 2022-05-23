@@ -8,7 +8,7 @@ from pathlib import Path
 from model.script.single_stock_down_model import get_single_stock_down_data
 
 
-def test_for_get_single_stock_up_data():
+def test_for_get_single_stock_down_data(code):
     """
     test for single_stock_down_model, this function mainly downloads the data for each stock_all separately.
 
@@ -16,6 +16,7 @@ def test_for_get_single_stock_up_data():
     lg = bs.login()
     print('login respond error_code:'+lg.error_code)
     print('login respond  error_msg:'+lg.error_msg)
+    """
     stock_dir = Path(__file__).parent / "../stock_industry.txt"
     stock_code_list = []
     debug = 1
@@ -34,15 +35,18 @@ def test_for_get_single_stock_up_data():
                 debug_idx += 1
                 if debug_idx < 5:
                     print(line)
-
+    """
     # stock_code_list = ["sz.002417"]
     # print(len(stock_code_list))
+    stock_code_list = code
     for stock_code in stock_code_list:
         file_path = stock_code + ".txt"
         save_path = Path(__file__).parent / "../data/down" / file_path
+        """  
         save_dir_path = Path(__file__).parent / "../data/down" 
         if not os.path.exists(save_dir_path):
             os.makedirs(save_dir_path)
+        """
         flag_success = get_single_stock_down_data(lg, stock_code, save_path)
         if flag_success == 0:
             os.remove(save_path)

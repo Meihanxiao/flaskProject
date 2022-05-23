@@ -1,10 +1,10 @@
 [
     {
         "": "0",
-        "Explained variance score": "-0.23",
-        "Mean absolute error": "0.0127",
+        "Explained variance score": "0.383",
+        "Mean absolute error": "0.0117",
         "Mean squared error": "0.0002",
-        "Median absolute error": "0.012",
-        "R2": "-0.5666"
+        "Median absolute error": "0.0126",
+        "R2": "-0.804"
     }
 ]

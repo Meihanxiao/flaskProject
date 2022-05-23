@@ -19,15 +19,9 @@ def renew_db():
     # 获取行业分类数据
     rs = bs.query_stock_basic()
 
-    # 打印结果集
-    industry_list = []
-    while (rs.error_code == '0') & rs.next():
-        # 获取一条记录，将记录合并在一起
-        industry_list.append(rs.get_row_data())
+    code_list = []  # 数据库
 
-    code_list = []
-
-    new_data = db.stock_all.find()
+    new_data = db.stock_all.find()  # 数据库中id
     for data in new_data:
         code_list.append(data['stock_id'])
 
@@ -43,7 +37,7 @@ def renew_db():
         # 获取一条记录，将记录合并在一起
         industry_lists.append(rs.get_row_data())
 
-    code_list1 = []
+    code_list1 = []  # 接口
     for industry_list in industry_lists:
         code_list1.append(industry_list[0])
     # print(code_list1)

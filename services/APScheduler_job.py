@@ -13,7 +13,7 @@ stock_daily = db.stock_daily  # 每日真实数据，包括换手率
 class JobList(object):
     JOBS = [
         {
-            'id': 'renew_basic_db',  # 更新数据库（基础信息）
+            'id': 'renew_basic_db',  # 更新数据库（基础信息,包括退市信息）
             'func': 'services:APSrenew_basic_db.renew_basic_db',  # 任务执行程序
             'args': None,  # 执行程序参数
             'trigger': 'cron',  # 任务执行类型，定时器
@@ -22,7 +22,7 @@ class JobList(object):
             'minute': 0
         },
         {
-            'id': 'renew_daily_db',  # 更新数据库（数据信息日线）比较慢
+            'id': 'renew_daily_db',  # 更新数据库（数据信息日线）比较慢 第一步
             'func': 'services:APSrenew_daily_db.renew_daily_db',  # 任务执行程序
             'args': None,  # 执行程序参数
             'trigger': "interval",
@@ -31,7 +31,7 @@ class JobList(object):
             'minutes': 2,
         },
         {
-            'id': 'mark_outmarket',  # 更新数据库（退市信息）
+            'id': 'mark_outmarket',  # 更新数据库（退市信息，用basic数据库的信息整合退市信息到all数据库里）
             'func': 'services:APSmark_outmarket.mark_outmarket',  # 任务执行程序
             'args': None,  # 执行程序参数
             'trigger': 'cron',  # 任务执行类型，定时器
@@ -40,7 +40,7 @@ class JobList(object):
             'minute': 5
         },
         {
-            'id': 'renew_db',  # 更新数据库任务
+            'id': 'renew_db',  # 更新数据库任务（更新股票信息到all里）
             'func': 'services:APSrenew_db.renew_db',  # 任务执行程序
             'args': None,  # 执行程序参数
             'trigger': 'cron',  # 任务执行类型，定时器
@@ -49,7 +49,7 @@ class JobList(object):
             'minute': 1
         },
         {
-            'id': 'run_model',  # 运行模型任务
+            'id': 'run_model',  # 运行模型任务 第二步
             'func': 'services:APSrun_model.run_model',  # 任务执行程序
             'args': None,  # 执行程序参数
             'trigger': "interval",
