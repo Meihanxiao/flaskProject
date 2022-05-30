@@ -50,7 +50,7 @@ class JobList(object):
         },
         {
             'id': 'run_lstm',
-            'func': 'services:APSrun_model.run_model',
+            'func': 'services:APSlstm.run_lstm',
             'args': None,
             'trigger': "interval",
             'start_date': '17:01:00',
