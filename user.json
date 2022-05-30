@@ -4,17 +4,16 @@
   },
   "account": "mhx",
   "password": "123456",
-  "count_self_choose": 4,
+  "count_self_choose": 3,
   "self_choose_stock": [
     "sh.600004",
     "sh.600000",
-    "sh.600009",
-    "sh.600016"
+    "sh.600009"
   ],
   "count_long_line": 2,
   "long_line_stock": [
     "sh.600000",
-    "sh.600008"
+    "sh.600111"
   ]
 },{
   "_id": {
