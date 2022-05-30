@@ -22,8 +22,8 @@ def go_self_detail_up():
     else:
         stock_industry = this_stock['stock_industry']
     stock_details = stock.find_one({"stock_id": stock_id})
-    # for stock_detail in stock_details['stock_data']:
-    #     print(stock_detail['stock_daily_predict_down'])
+    for stock_detail in stock_details['stock_data']:
+        print(stock_detail['date'])
     return render_template('stock/self_choose_detail_up.html', stock_datas=stock_details['stock_data'], stock_id=stock_id,
                            stock_name=stock_name, stock_industry=stock_industry)
 

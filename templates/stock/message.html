@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap-table.css">
     <!--[if lt IE 9]>
 		<script src="/static/assets/js/html5shiv.min.js"></script>
 		<script src="/static/assets/js/respond.min.js"></script>
@@ -84,63 +85,57 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="blog grid-blog">
-                            <div class="blog-image">
-                                <img class="img-fluid" src="assets/img/blog/blog-01.jpg" alt="">
-                            </div>
-                            <div class="blog-content">
-                                <h3 class="blog-title">重磅利好！俄国防部做出重大决定，数倍减少军事行动，两大步骤缓解冲突！</h3>
-                                <p>当地时间3月29日，俄罗斯代表团团长梅津斯基在第五轮俄乌谈判第一天的会谈结束后表示，双方谈判很有建设性，俄方正在研究乌克兰方面的提议，相关信息将向普京总统报告。此外，他还说，俄罗斯正在采取两个步骤，来缓和与乌克兰的冲突。</p>
-                                <a href="blog-details.html" class="read-more"><i class="fa fa-long-arrow-right"></i> 阅读更多</a>
-                                <div class="blog-info clearfix">
-                                    <div class="post-left">
-                                        <ul>
-                                            <li><a href="#."><i class="fa fa-calendar"></i> <span>30 3, 2022</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <h6 class="card-title text-bold">涨幅行情</h6>
+                        <div class="table-responsive">
+                            <table data-toggle="table" data-locale="zh-CN  " class="table table-bordered " data-search = "true" data-pagination="true">
+                                <thead>
+                                <tr>
+                                    <th>股票代码</th>
+                                    <th>换手率</th>
+                                    <th data-sortable = "true">涨幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    {% for a_stock_up in stock_up %}
+                                        <tr>
+                                            <td>{{ a_stock_up.code }}</td>
+                                            <td>{{ a_stock_up.turn}}</td>
+                                            <td><font color="red">{{ a_stock_up.pctChg }}</font></td>
+                                        </tr>
+                                    {% endfor %}
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="blog grid-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img class="img-fluid" src="assets/img/blog/blog-02.jpg" alt=""></a>
-                            </div>
-                            <div class="blog-content">
-                                <h3 class="blog-title">“十四五”中医药发展规划发布 明确十大任务！机构建议关注四大赛道</h3>
-                                <p>3月29日，国务院办公厅印发《“十四五”中医药发展规划》，明确到2025年，中医药健康服务能力明显增强，中医药高质量发展政策和体系进一步完善，中医药振兴发展取得积极成效，在健康中国建设中的独特优势得到充分发挥。为实现上述目标，《规划》提出建设高水平中医药传承保护与科技创新体系、推动中药产业高质量发展、发展中医药健康服务业、加快中医药开放发展等十大任务。</p>
-                                <a href="blog-details.html" class="read-more"><i class="fa fa-long-arrow-right"></i>阅读更多</a>
-                                <div class="blog-info clearfix">
-                                    <div class="post-left">
-                                        <ul>
-                                            <li><a href="#."><i class="fa fa-calendar"></i> <span>29 3, 2022</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <h6 class="card-title text-bold">跌幅行情</h6>
+                        <div class="table-responsive">
+                            <table data-toggle="table" data-locale="zh-CN  " class="table table-bordered " data-search = "true" data-pagination="true">
+                                <thead>
+                                <tr>
+                                    <th>股票代码</th>
+                                    <th>换手率</th>
+                                    <th data-sortable = "true">跌幅</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    {% for a_stock_down in stock_down %}
+                                        <tr>
+                                            <td>{{ a_stock_down.code }}</td>
+                                            <td>{{ a_stock_down.turn}}</td>
+                                            <td><font color="green">{{ a_stock_down.pctChg }}</font></td>
+                                        </tr>
+                                    {% endfor %}
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="blog grid-blog">
-                            <div class="blog-image">
-                                <a href="blog-details.html"><img class="img-fluid" src="assets/img/blog/blog-03.jpg" alt=""></a>
-                            </div>
-                            <div class="blog-content">
-                                <h3 class="blog-title">小米产业链IPO政策受限？证监会发声：系谣言；小米回应：诉讼到底</h3>
-                                <p>日前，市场有传言“监管层对当前科创板、创业板在审涉及小米产业链的项目做了排查，涉小米产业链IPO政策受限”。3月29日，证监会对这一传闻重磅发声，直指该内容“失实”。“小米公司发言人”官微发布声明，将对“恶意造谣诉讼到底”。消息发布后，小米股价直线拉升，截至收盘跌幅收窄至2.49%，此前曾一度跌超7%。</p>
-                                <a href="blog-details.html" class="read-more"><i class="fa fa-long-arrow-right"></i> 阅读更多</a>
-                                <div class="blog-info clearfix">
-                                    <div class="post-left">
-                                        <ul>
-                                            <li><a href="#."><i class="fa fa-calendar"></i> <span>30 3, 2022</span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -153,6 +148,8 @@
     <script src="/static/assets/js/Chart.bundle.js"></script>
     <script src="/static/assets/js/chart.js"></script>
     <script src="/static/assets/js/app.js"></script>
+    <script src="/static/assets/js/bootstrap-table-zh-CN.js"></script>
+    <script src="/static/assets/js/bootstrap-table.min.js"></script>
 
 </body>
 

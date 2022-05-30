@@ -1,4 +1,3 @@
-from apscheduler.schedulers.blocking import BlockingScheduler
 from flask import Flask, render_template, request, flash
 from flask_apscheduler import APScheduler
 

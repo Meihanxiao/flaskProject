@@ -80,7 +80,7 @@
             <div class="content">
                 <div class="row">
                     <div class="col-sm-8">
-                        <h4 class="page-title">自选股概览</h4>
+                        <h4 class="page-title">自选股概览——{{ self_choose_stocks[0].stock_data[-1].date }}数据</h4>
                     </div>
                 </div>
                 <div class="row">
@@ -95,10 +95,10 @@
                                             <th>股票代码</th>
                                             <th>股票名字</th>
                                             <th>股票行业</th>
-                                            <th>当天模型预测涨幅</th>
-                                            <th>当天模型预测跌幅</th>
-                                            <th>涨幅详情</th>
-											<th>跌幅详情</th>
+                                            <th>当天模型预测/实际开盘价</th>
+                                            <th>当天模型预测/实际收盘价</th>
+                                            <th>开盘价预测详情</th>
+											<th>收盘价预测详情</th>
 											<th>操作</th>
                                         </tr>
                                     </thead>
@@ -115,15 +115,15 @@
                                                 <td><a class="btn btn-secondary btn-sm disabled" href="javascript:;" onclick="detail_down('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
 											    <td><a class="btn btn-danger btn-sm" href="javascript:;" onclick="del('{{ self_choose_stock.stock_id }}')"><font style="color: white">删除</font></a></td>
                                             {% else %}
-                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_up < 0 %}
-                                                    <td><font color="green">{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}} </font></td>
+                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_up < self_choose_stock.stock_data[-1].stock_daily_real_up %}
+                                                    <td><font color="green">{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}}</font>/{{ self_choose_stock.stock_data[-1].stock_daily_real_up}}</td>
                                                 {% else %}
-                                                    <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}} </font></td>
+                                                    <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_up}}</font>/{{ self_choose_stock.stock_data[-1].stock_daily_real_up}}</td>
                                                 {% endif %}
-                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_up < 0 %}
-                                                    <td><font color="green">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }} </font></td>
+                                                {% if self_choose_stock.stock_data[-1].stock_daily_predict_down < self_choose_stock.stock_data[-1].stock_daily_real_down %}
+                                                    <td><font color="green">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }}</font>/{{ self_choose_stock.stock_data[-1].stock_daily_real_down }}</td>
                                                 {% else %}
-                                                    <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }} </font></td>
+                                                    <td><font color="red">{{ self_choose_stock.stock_data[-1].stock_daily_predict_down }}</font>/{{ self_choose_stock.stock_data[-1].stock_daily_real_down }}</td>
                                                 {% endif %}
                                                 <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_up('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>
                                                 <td><a class="btn btn-primary btn-sm" href="javascript:;" onclick="detail_down('{{ self_choose_stock.stock_id }}')"><font style="color: white">查看</font></a></td>

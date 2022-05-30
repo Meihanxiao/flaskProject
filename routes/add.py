@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, flash, Blueprint, session, redirect
 import pymongo
 
-from services.add_run_model import add_run_model
-
 add = Blueprint('add', __name__)
 
 client = pymongo.MongoClient(host="localhost", port=27017)

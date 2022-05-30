@@ -1,9 +1,6 @@
 import datetime
 from dateutil.relativedelta import relativedelta
 from flask import Flask, render_template, request, flash, Blueprint, session
-import baostock as bs
-import pandas as pd
-import time
 from dateutil import parser
 import pymongo
 
@@ -120,7 +117,15 @@ def go_add_longline():
 @go.route('/goMessage')
 def go_message():
     username = session.get('username')
-    return render_template('stock/message.html', username=username)
+    name_condition = {"$or": [{"code": {'$regex': '^sh.'}}, {"stock_id": {'$regex': '^sz.'}}]}
+    pctChg_condition = {'pctChg': {"$gt": "4"}}
+    stock_up = stock_daily.find({"$and": [pctChg_condition, name_condition]})
+    # print(stock_up)
+    name_condition = {"$or": [{"code": {'$regex': '^sh.'}}, {"stock_id": {'$regex': '^sz.'}}]}
+    pctChg_condition = {"$and":[{'pctChg': {"$gt": "-4"}},{'pctChg':{'$regex': '^-'}}]}
+    stock_down = stock_daily.find({"$and": [pctChg_condition, name_condition]})
+    # print(stock_down)
+    return render_template('stock/message.html', username=username, stock_down=stock_down, stock_up=stock_up)
 
 
 # 跳转到每日信息界面

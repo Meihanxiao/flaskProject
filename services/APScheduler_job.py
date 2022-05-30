@@ -49,14 +49,24 @@ class JobList(object):
             'minute': 1
         },
         {
-            'id': 'run_model',  # 运行模型任务
-            'func': 'services:APSrun_model.run_model',  # 任务执行程序
-            'args': None,  # 执行程序参数
+            'id': 'run_lstm',
+            'func': 'services:APSrun_model.run_model',
+            'args': None,
             'trigger': "interval",
             'start_date': '17:01:00',
             'end_date': '23:01:00',
             'minutes': 2,
         }
+        # ,
+        # {
+        #     'id': 'run_model',  # 运行模型任务
+        #     'func': 'services:APSrun_model.run_model',  # 任务执行程序
+        #     'args': None,  # 执行程序参数
+        #     'trigger': "interval",
+        #     'start_date': '17:01:00',
+        #     'end_date': '23:01:00',
+        #     'minutes': 2,
+        # }
     ]
 
 
